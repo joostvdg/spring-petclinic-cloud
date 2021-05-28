@@ -14,11 +14,15 @@ spec:
   strategy: {}
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "8080"
       labels:
         app: vets-service
     spec:
       containers:
-      - image: ${REPOSITORY_PREFIX}/vets-service:latest
+      - image: platform9community/vets-service:latest
         name: vets-service
         imagePullPolicy: Always
         livenessProbe:
@@ -54,8 +58,6 @@ spec:
              secretKeyRef:
                name: vets-db-mysql
                key: mysql-root-password
-        - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
-          value: proxy://wavefront-proxy.spring-petclinic.svc.cluster.local:2878
         ports:
         - containerPort: 8080
         resources: {}

@@ -14,11 +14,15 @@ spec:
   strategy: {}
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "8080"
       labels:
         app: api-gateway
     spec:
       containers:
-      - image: ${REPOSITORY_PREFIX}/api-gateway:latest
+      - image: platform9community/api-gateway:latest
         name: api-gateway
         imagePullPolicy: Always
         livenessProbe:
@@ -45,8 +49,6 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: kubernetes
-        - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
-          value: proxy://wavefront-proxy.spring-petclinic.svc.cluster.local:2878
         ports:
         - containerPort: 8080
       restartPolicy: Always
