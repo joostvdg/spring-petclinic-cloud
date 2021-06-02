@@ -12,6 +12,11 @@ spring:
       uri: http://config-server:8888
 ---
 spring:
+  boot:
+    admin:
+      client:
+        instance:
+          service-base-url: http://vets-service.spring-petclinic.svc.cluster.local:8080
   profiles: kubernetes
   cloud:
     config:

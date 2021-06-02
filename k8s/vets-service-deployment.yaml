@@ -60,6 +60,5 @@ spec:
                key: mysql-root-password
         ports:
         - containerPort: 8080
-        resources: {}
       restartPolicy: Always
 status: {}
