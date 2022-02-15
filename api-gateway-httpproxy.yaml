@@ -1,0 +1,20 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  labels:
+    app: spring-petclinic-api
+  name: spring-petclinic-api-proxy
+  namespace: spring-petclinic
+spec:
+  routes:
+  - conditions:
+    - prefix: /
+    pathRewritePolicy:
+      replacePrefix:
+      - prefix: /
+        replacement: /
+    services:
+    - name: api-gateway
+      port: 8080
+  virtualhost:
+    fqdn: petclinic-api.10.213.178.68.nip.io
