@@ -18,3 +18,7 @@ This fork also demostrates the use of a free Platform9 managed Kubernetes cluste
 ## Running the application in Kubernetes
 
 This project has a helm chart that is listed in [ArtifactHub](https://artifacthub.io/packages/helm/platform9-community/spring-petclinic-cloud) or is available from [its home](https://platform9-community.github.io/helm-charts/spring-petclinic-cloud/). Please refer to that readme for a more detailed description of what is deployed.
+
+## Testing
+
+Test #1
