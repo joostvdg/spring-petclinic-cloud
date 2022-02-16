@@ -21,4 +21,4 @@ This project has a helm chart that is listed in [ArtifactHub](https://artifacthu
 
 ## Testing
 
-Test #1
+Test #2
