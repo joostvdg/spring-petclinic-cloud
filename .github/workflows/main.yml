@@ -53,6 +53,11 @@ jobs:
     - name: Build with Maven
       run: | 
         ./mvnw spring-boot:build-image -P k8s -D REPOSITORY_PREFIX=${REPOSITORY_PREFIX}
-#     - name: Push to Registry
-#       run: |
-#         docker push ${{ env.IMAGE_NAME }}
+    - name: Push to Registry
+      run: |
+        docker push ${REPOSITORY_PREFIX}/api-gateway:latest
+        docker push ${REPOSITORY_PREFIX}/visits-service:latest
+        docker push ${REPOSITORY_PREFIX}/vets-service:latest
+        docker push ${REPOSITORY_PREFIX}/customers-service:latest
+        docker push ${REPOSITORY_PREFIX}/admin-server:latest
+        
