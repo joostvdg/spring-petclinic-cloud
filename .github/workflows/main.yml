@@ -51,13 +51,17 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build with Maven
+      env:
+        IMAGE_TAG: ${{needs.tag.outputs.tag}}
       run: | 
-        ./mvnw spring-boot:build-image -P k8s -D REPOSITORY_PREFIX=${REPOSITORY_PREFIX}
+        ./mvnw spring-boot:build-image -P k8s -D REPOSITORY_PREFIX=${REPOSITORY_PREFIX} -D IMAGE_TAG=${IMAGE_TAG}
     - name: Push to Registry
+      env:
+        IMAGE_TAG: ${{needs.tag.outputs.tag}}
       run: |
-        docker push ${REPOSITORY_PREFIX}/api-gateway:latest
-        docker push ${REPOSITORY_PREFIX}/visits-service:latest
-        docker push ${REPOSITORY_PREFIX}/vets-service:latest
-        docker push ${REPOSITORY_PREFIX}/customers-service:latest
-        docker push ${REPOSITORY_PREFIX}/admin-server:latest
+        docker push ${REPOSITORY_PREFIX}/api-gateway:${IMAGE_TAG}
+        docker push ${REPOSITORY_PREFIX}/visits-service:${IMAGE_TAG}
+        docker push ${REPOSITORY_PREFIX}/vets-service:${IMAGE_TAG}
+        docker push ${REPOSITORY_PREFIX}/customers-service:${IMAGE_TAG}
+        docker push ${REPOSITORY_PREFIX}/admin-server:${IMAGE_TAG}
         
