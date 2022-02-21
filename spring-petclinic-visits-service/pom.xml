@@ -25,7 +25,7 @@
 		<spring-boot.version>2.3.1.RELEASE</spring-boot.version>
 		<spring-cloud.version>Hoxton.SR6</spring-cloud.version>
 
-		<spring-boot.build-image.imageName>${REPOSITORY_PREFIX}/visits-service</spring-boot.build-image.imageName>
+		<spring-boot.build-image.imageName>${REPOSITORY_PREFIX}/visits-service:${IMAGE_TAG}</spring-boot.build-image.imageName>
 
 	</properties>
 
