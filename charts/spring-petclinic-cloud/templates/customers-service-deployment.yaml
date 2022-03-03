@@ -36,7 +36,7 @@ spec:
         app: customers-service
     spec:
       containers:
-      - image: "{{ .Values.admin.image.repositoryServer }}/{{ .Values.admin.image.repositoryProject }}/customer-service:{{ .Values.admin.image.tag }}"
+      - image: "{{ .Values.admin.image.repositoryServer }}/{{ .Values.admin.image.repositoryProject }}/customers-service:{{ .Values.admin.image.tag }}"
         name: customers-service
         imagePullPolicy: IfNotPresent
         resources:
