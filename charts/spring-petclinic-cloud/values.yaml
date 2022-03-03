@@ -43,7 +43,7 @@ vets-db-mysql:
   auth:
     database: "service_instance_db"
   image:
-    tag: 8.8.25
+    tag: 8.0.25
   fullnameOverride: "vets-db-mysql"
 
 visits-db-mysql:
@@ -53,7 +53,7 @@ visits-db-mysql:
   auth:
     database: "service_instance_db"
   image:
-    tag: 8.8.25
+    tag: 8.0.25
   fullnameOverride: "visits-db-mysql"
 
 customers-db-mysql:
@@ -63,7 +63,7 @@ customers-db-mysql:
   auth:
     database: "service_instance_db"
   image:
-    tag: 8.8.25
+    tag: 8.0.25
   fullnameOverride: "customers-db-mysql"
 
 #==================================================
