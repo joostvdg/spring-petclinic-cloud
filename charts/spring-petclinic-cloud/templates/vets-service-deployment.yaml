@@ -37,7 +37,7 @@ spec:
       containers:
       - image: "{{ .Values.admin.image.repositoryServer }}/{{ .Values.admin.image.repositoryProject }}/vets-service:{{ .Values.admin.image.tag }}"
         name: vets-service
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             port: 8080
