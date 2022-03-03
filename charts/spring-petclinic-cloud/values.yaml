@@ -35,7 +35,6 @@ customers:
 #==================================================
 #      DATABASE CONFIGURATIONS
 #==================================================
-auth.rootPassword: l7OsXmzkh3
 vets-db-mysql:
   primary:
     persistence:
