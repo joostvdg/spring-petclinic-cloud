@@ -39,15 +39,15 @@ dependencies: #helm dependency update
 
   #MySql databases (required)
   - name: mysql
-    version: 8.8.25
+    version: 8.5.9
     repository: "@bitnami"
     alias: vets-db-mysql
   - name: mysql
-    version: 8.8.25
+    version: 8.5.9
     repository: "@bitnami"
     alias: visits-db-mysql
   - name: mysql
-    version: 8.8.25
+    version: 8.5.9
     repository: "@bitnami"
     alias: customers-db-mysql
 
