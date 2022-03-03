@@ -5,36 +5,37 @@ admin:
   image:
     repositoryServer: ghcr.io
     repositoryProject: joostvdg
-    tag: latest
+    tag: 0.1.0-9668176
 
 api:
   image:
     repositoryServer: ghcr.io
     repositoryProject: joostvdg
-    tag: latest
+    tag: 0.1.0-9668176
 
 vets:
   image:
     repositoryServer: ghcr.io
     repositoryProject: joostvdg
-    tag: latest
+    tag: 0.1.0-9668176
 
 visits:
   image:
     repositoryServer: ghcr.io
     repositoryProject: joostvdg
-    tag: latest
+    tag: 0.1.0-9668176
 
 customers:
   image:
     repositoryServer: ghcr.io
     repositoryProject: joostvdg
-    tag: latest
+    tag: 0.1.0-9668176
 
 
 #==================================================
 #      DATABASE CONFIGURATIONS
 #==================================================
+auth.rootPassword: l7OsXmzkh3
 vets-db-mysql:
   primary:
     persistence:
