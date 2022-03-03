@@ -38,6 +38,13 @@ spec:
       - image: "{{ .Values.admin.image.repositoryServer }}/{{ .Values.admin.image.repositoryProject }}/vets-service:{{ .Values.admin.image.tag }}"
         name: vets-service
         imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
         livenessProbe:
           httpGet:
             port: 8080
