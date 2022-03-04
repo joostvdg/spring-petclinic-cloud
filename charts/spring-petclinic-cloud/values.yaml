@@ -5,6 +5,8 @@ customZipkin:
   enabled: true
   uri: http://wavefront-proxy-tanzu.tanzu-observability-saas.svc.cluster.local:9411
 
+httpproxy:
+  enabled: true
 dns:
   subdomain: 172.16.17.11
   domain: nip.io
