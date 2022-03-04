@@ -76,7 +76,7 @@ data:
       messages:
         basename: messages/messages
       zipkin:
-        base-url: http://zipkip-zipkin.tanzu-system-monitoring.svc.cluster.local:9411
+        base-url: {{ .Values.customZipkin.uri }}
       cloud:
         kubernetes:
           discovery:

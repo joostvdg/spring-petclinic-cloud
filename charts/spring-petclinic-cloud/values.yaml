@@ -1,6 +1,10 @@
 #==================================================
 #      APP CONFIGURATIONS
 #==================================================
+customZipkin:
+  enabled: true
+  uri: http://wavefront-proxy-tanzu.tanzu-observability-saas.svc.cluster.local:9411
+
 admin:
   image:
     repositoryServer: ghcr.io
