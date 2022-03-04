@@ -41,12 +41,7 @@ spec:
         name: vets-service
         imagePullPolicy: IfNotPresent
         resources:
-          requests:
-            memory: "512Mi"
-            cpu: "250m"
-          limits:
-            memory: "768Mi"
-            cpu: "500m"
+{{ toYaml .Values.vets.resources | indent 12 }}
         livenessProbe:
           httpGet:
             port: 8080

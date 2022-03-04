@@ -22,18 +22,39 @@ vets:
     repositoryServer: ghcr.io
     repositoryProject: joostvdg
     tag: 0.1.0-9668176
+  resources: # this service needs a min of ~650mb to start due its JVM parameters
+    requests:
+      memory: "512Mi"
+      cpu: "250m"
+    limits:
+      memory: "768Mi"
+      cpu: "500m"
 
 visits:
   image:
     repositoryServer: ghcr.io
     repositoryProject: joostvdg
     tag: 0.1.0-9668176
+  resources: # this service needs a min of ~650mb to start due its JVM parameters
+    requests:
+      memory: "512Mi"
+      cpu: "250m"
+    limits:
+      memory: "768Mi"
+      cpu: "500m"
 
 customers:
   image:
     repositoryServer: ghcr.io
     repositoryProject: joostvdg
     tag: 0.1.0-9668176
+  resources: # this service needs a min of ~650mb to start due its JVM parameters
+    requests:
+      memory: "512Mi"
+      cpu: "250m"
+    limits:
+      memory: "768Mi"
+      cpu: "500m"
 
 
 #==================================================
