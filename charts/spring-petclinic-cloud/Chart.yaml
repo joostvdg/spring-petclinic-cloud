@@ -94,4 +94,4 @@ maintainers:
 
 icon: https://platform9-community.github.io/helm-charts/spring-petclinic-cloud/spring-cloud.png
 
-kubeVersion: ">= 1.18.10 <= 1.21.2"
+kubeVersion: ">= 1.18.10 <= 1.22.6"
